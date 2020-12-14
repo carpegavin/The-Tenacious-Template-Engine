@@ -14,6 +14,101 @@ const render = require("./lib/htmlRenderer");
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
+//manager questions
+inquirer.prompt([
+    
+    {
+        type: "input",
+        name: "name",
+        message: "What is your manager's name?",
+    },
+    {
+        type: "input",
+        name: "ID",
+        message: "What is your manager's ID?",
+    },
+    {
+        type: "input",
+        name: "email", 
+        message: "What is your manager's email?",
+    },
+    {
+        type: "input",
+        name: "office",
+        message: "What is your Manager's office number?"
+    },
+    {
+        type: "list",
+        name: "member",
+        message: "Which type of team member would you like to add?",
+        choices: [
+            "Engineer",
+            "Intern",
+            "No more team members, please"
+        ],
+    }
+
+    
+])
+
+//engineer questions
+inquirer.prompt([
+    {
+        type: "input",
+        name: "name",
+        message: "What is your Engineer's name?",
+    },
+    {
+        type: "input",
+        name: "ID",
+        message: "What is your engineer's ID?",
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "What is your engineer's email?"
+    },
+    {
+        type: "input",
+        name: "GitHub",
+        message: "What is your Engineer's GitHub username?",
+    },
+    {
+        type: "list",
+        name: "member",
+        message: "Which type of team member would you like to add?",
+        choices: [
+            "Intern",
+            "No more team mebers, please."
+        ]
+    }
+])
+
+//intern questions
+inquirer.prompt([
+    {
+        type: "input",
+        name: "name",
+        message: "What is your Intern's name?",
+    },
+    {
+        type: "input",
+        name: "ID",
+        message: "What is your Intern's ID?",
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "What is your Intern's email?",
+    },
+    {
+        type: "input",
+        name: "school", 
+        message: "What is your Intern's school?",
+    },
+
+])
+
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
