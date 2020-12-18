@@ -8,14 +8,14 @@ const fs = require("fs");
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
-//usew render to render our team from an array into the render function
+
 const render = require("./lib/htmlRenderer");
 
 var team = []
     
-// render(team);
+
 start();
-//----General Question--
+//-------------General Questions--------------------
 function start (){
     inquirer.prompt([
         {
@@ -104,66 +104,3 @@ function askInternQuestions(secondRes) {
     })
 }
 
-//-----------intern questions---------------
-// inquirer.promptIntern([
-//     {
-//         type: "input",
-//         name: "name",
-//         message: "What is your Intern's name?",
-//     },
-//     {
-//         type: "input",
-//         name: "id",
-//         message: "What is your Intern's id?",
-//     },
-//     {
-//         type: "input",
-//         name: "email",
-//         message: "What is your Intern's email?",
-//     },
-//     {
-//         type: "input",
-//         name: "school", 
-//         message: "What is your Intern's school?",
-//     },
-
-//     {
-//         type: "list",
-//         name: "member",
-//         message: "Would you like to add anymore team members?",
-//         choices: [
-//             "Intern",
-//             "Engineer",
-//             "No more team members. The perfect team has been built."
-//         ]
-//     }
-
-// ]).then(internResponse => {
-//     if (response = Engineer) {
-//         promptEngineer();
-//     }   else if (response = Intern) {
-//         promptIntern();
-//     }   else {
-//         render(team);
-//     }
-//     team.push(new Intern());
-// })
-
-
-
-
-// After you have your html, you're now ready to create an HTML file using the HTML
-// returned from the `render` function. Now write it to a file named `team.html` in the
-// `output` folder. You can use the variable `outputPath` above target this location.
-// Hint: you may need to check if the `output` folder exists and create it if it
-// does not.
-
-// HINT: each employee type (manager, engineer, or intern) has slightly different
-// information; write your code to ask different questions via inquirer depending on
-// employee type.
-
-// HINT: make sure to build out your classes first! Remember that your Manager, Engineer,
-// and Intern classes should all extend from a class named Employee; see the directions
-// for further information. Be sure to test out each class and verify it generates an
-// object with the correct structure and methods. This structure will be crucial in order
-// for the provided `render` function to work! ```
