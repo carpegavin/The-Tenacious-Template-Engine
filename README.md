@@ -15,7 +15,7 @@ https://drive.google.com/file/d/1pDITH95Dm2WyT66uuhttsVI0Xb0TjMqE/view
 <br>
 <br>
 
-![scrngrab]https://github.com/carpegavin/The-Tenacious-Template-Engine/blob/main/assets/img/myTeam.gif?raw=true
+![scrngrab](https://github.com/carpegavin/The-Tenacious-Template-Engine/blob/main/assets/img/myTeam.gif?raw=true)
 
 ### Questions?
 
