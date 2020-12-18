@@ -14,9 +14,11 @@ const render = require("./lib/htmlRenderer");
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
-//manager questions
-inquirer.prompt([
-    
+    // class employee
+
+//--------------manager questions--------------
+
+inquirer.promptManager([
     {
         type: "input",
         name: "name",
@@ -24,8 +26,8 @@ inquirer.prompt([
     },
     {
         type: "input",
-        name: "ID",
-        message: "What is your manager's ID?",
+        name: "id",
+        message: "What is your manager's id?",
     },
     {
         type: "input",
@@ -48,11 +50,21 @@ inquirer.prompt([
         ],
     }
 
-    
-])
 
-//engineer questions
-inquirer.prompt([
+]).then(managerResponse => {
+    if (response = Engineer) {
+        promptEngineer();
+    }   else if (response = Intern) {
+        promptIntern();
+    }   else {
+        render(team);
+    }
+    team.push(new Manager());
+})
+
+
+//-------engineer questions------------------
+inquirer.promptEngineer([
     {
         type: "input",
         name: "name",
@@ -60,8 +72,8 @@ inquirer.prompt([
     },
     {
         type: "input",
-        name: "ID",
-        message: "What is your engineer's ID?",
+        name: "id",
+        message: "What is your engineer's id?",
     },
     {
         type: "input",
@@ -79,13 +91,23 @@ inquirer.prompt([
         message: "Which type of team member would you like to add?",
         choices: [
             "Intern",
-            "No more team mebers, please."
+            "Engineer",
+            "No more team members, please."
         ]
     }
-])
+]).then(engineerResponse => {
+    if (response = Engineer) {
+        promptEngineer();
+    }   else if (response = Intern) {
+        promptIntern();
+    }   else {
+        render(team);
+    }
+    team.push(new Engineer());
+})
 
-//intern questions
-inquirer.prompt([
+//-----------intern questions---------------
+inquirer.promptIntern([
     {
         type: "input",
         name: "name",
@@ -93,8 +115,8 @@ inquirer.prompt([
     },
     {
         type: "input",
-        name: "ID",
-        message: "What is your Intern's ID?",
+        name: "id",
+        message: "What is your Intern's id?",
     },
     {
         type: "input",
@@ -107,7 +129,37 @@ inquirer.prompt([
         message: "What is your Intern's school?",
     },
 
-])
+    {
+        type: "list",
+        name: "member",
+        message: "Would you like to add anymore team members?",
+        choices: [
+            "Intern",
+            "Engineer",
+            "No more team members. The perfect team has been built."
+        ]
+    }
+
+]).then(internResponse => {
+    if (response = Engineer) {
+        promptEngineer();
+    }   else if (response = Intern) {
+        promptIntern();
+    }   else {
+        render(team);
+    }
+    team.push(new Intern());
+})
+
+team = [
+    new Manager(),
+    new Engineer(),
+    new Intern(),
+]
+    
+render(team);
+
+
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
