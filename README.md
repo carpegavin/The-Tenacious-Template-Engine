@@ -1,7 +1,7 @@
 # The-Tenacious-Template-Engine
 
-### Link to code video
-https://drive.google.com/file/d/1pDITH95Dm2WyT66uuhttsVI0Xb0TjMqE/view
+### Link to full demo vid
+https://drive.google.com/file/d/17s9Z9bg15NUSgMYsApuqaNOrNz6rwJQm/view
 <br>
 
 ### GNU license
@@ -10,14 +10,14 @@ https://drive.google.com/file/d/1pDITH95Dm2WyT66uuhttsVI0Xb0TjMqE/view
 <br>
 
 
-### This app creates a software engineering team from the command line with Node.js using the inquirer package, much HTML, and JS.
+### This app creates a software engineering team from the command line with Node.js using the inquirer package, HTML, and JS.
  
 <br>
 <br>
 
 ### Questions?
 
-Please don't hesitate to contact me
+Please don't hesitate to contact me:
 
 ### carpe.gavin@gmail.com
 

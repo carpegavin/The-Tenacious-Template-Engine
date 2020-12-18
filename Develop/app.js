@@ -69,7 +69,7 @@ function askManagerQuestions(secondRes) {
         },
     ]).then(managerResponse => {
         team.push(new Manager(secondRes.name, secondRes.id, secondRes.email, managerResponse.office));
-        console.log(team);
+        // console.log(team);
         start();
     })
 }
@@ -85,7 +85,7 @@ function askEngineerQuestions(secondRes) {
         },
     ]).then(engineerResponse => {
         team.push(new Engineer(secondRes.name, secondRes.id, secondRes.email, engineerResponse.github));
-        console.log(team);
+        // console.log(team);
         start();
     })
 }
