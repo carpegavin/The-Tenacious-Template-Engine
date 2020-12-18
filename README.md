@@ -10,9 +10,9 @@
 
 <br>
 
-```
-This app creates a software engineering team from the command line with Node.js using the inquirer package, much HTML, and JS.
-``` 
+
+### This app creates a software engineering team from the command line with Node.js using the inquirer package, much HTML, and JS.
+ 
 <br>
 <br>
 
